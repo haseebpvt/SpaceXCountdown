@@ -2,7 +2,7 @@
 SpaceX upcoming launch countdown using [SpaceX-API](https://github.com/r-spacex/SpaceX-API)
 
 ## Tech-stack
-Following a clean architecture design based on [android/architecture-samples](https://github.com/android/architecture-samples). Some reference are taken from [google/iosched].(https://github.com/google/iosched)
+Following a clean architecture design based on [android/architecture-samples](https://github.com/android/architecture-samples). Some reference are taken from [google/iosched](https://github.com/google/iosched)
 * Tech-stack
   * [Kotlin](https://kotlinlang.org/) + [Coroutines](https://kotlinlang.org/docs/reference/coroutines-overview.html) - perform background operations
   * [Hilt](https://developer.android.com/training/dependency-injection/hilt-android) - dependency injection
