@@ -12,8 +12,9 @@ import java.util.*
  * See [testing documentation](http://d.android.com/tools/testing).
  */
 class DateDifferenceTest {
+
     @Test
-    fun hourDifferenceTest() {
+    fun `hour difference test`() {
         val date1 = SimpleDateFormat("HH:mm:ss dd-MM-yyyy").parse("01:00:00 01-01-2000")
         val date2 = SimpleDateFormat("HH:mm:ss dd-MM-yyyy").parse("02:00:00 01-01-2000")
 
@@ -24,7 +25,7 @@ class DateDifferenceTest {
     }
 
     @Test
-    fun dayDifferenceTest() {
+    fun `day difference test`() {
         val date1 = SimpleDateFormat("HH:mm:ss dd-MM-yyyy").parse("01:00:00 01-01-2000")
         val date2 = SimpleDateFormat("HH:mm:ss dd-MM-yyyy").parse("01:00:00 02-01-2000")
 
