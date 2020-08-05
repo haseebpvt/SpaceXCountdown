@@ -3,8 +3,6 @@ package com.pensource.spacexcountdown.ui.home
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
-import com.bumptech.glide.Glide
-import com.pensource.spacexcountdown.R
 import com.pensource.spacexcountdown.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -24,8 +22,6 @@ class MainActivity : AppCompatActivity() {
             lifecycleOwner = this@MainActivity
         }
         setContentView(binding.root)
-
-        Glide.with(this).load(R.drawable.placeholder).into(binding.backgroundImage)
 
         viewModel.nextLaunch.observe(this, Observer {})
 

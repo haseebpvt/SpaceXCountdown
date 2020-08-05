@@ -16,17 +16,6 @@
         android:background="#000000"
         tools:context=".ui.home.MainActivity">
 
-        <ImageView
-            android:id="@+id/background_image"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:foreground="@drawable/image_foreground"
-            android:scaleType="centerCrop"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <TextView
             android:id="@+id/textView"
             android:layout_width="0dp"
@@ -41,7 +30,7 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/background_image" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <cn.iwgang.countdownview.CountdownView
             android:id="@+id/count_down_timer"
@@ -84,10 +73,15 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-        <com.anychart.AnyChartView
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/count_down_timer"
+            app:srcCompat="@drawable/usa_map" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
