@@ -70,10 +70,6 @@ dependencies {
     // LiveData
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0"
 
-    // CountDownView
-    // https://github.com/alexfu/CountDownView
-    implementation 'com.github.alexfu:CountDownView:0.1.0'
-
     // CountdownView
     // https://github.com/iwgang/CountdownView
     implementation 'com.github.iwgang:countdownview:2.1.6'

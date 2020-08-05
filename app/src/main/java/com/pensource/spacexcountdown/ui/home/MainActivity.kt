@@ -1,7 +1,6 @@
 package com.pensource.spacexcountdown.ui.home
 
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import com.pensource.spacexcountdown.databinding.ActivityMainBinding
@@ -27,10 +26,6 @@ class MainActivity : AppCompatActivity() {
         viewModel.nextLaunch.observe(this, Observer {})
 
         viewModel.nextLaunchCountdown.observe(this, Observer {
-            Log.d("test_log", "Remaingin time: $it")
-            binding.countDown.setStartDuration(it)
-            binding.countDown.start()
-
             binding.countDownTimer.start(it)
         })
     }
