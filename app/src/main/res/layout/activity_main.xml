@@ -17,16 +17,15 @@
         tools:context=".ui.home.MainActivity">
 
         <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="wrap_content"
+            android:id="@+id/background_image"
+            android:layout_width="0dp"
             android:layout_height="0dp"
             android:foreground="@drawable/image_foreground"
             android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/placeholder" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView"
@@ -56,7 +55,7 @@
             app:isShowMinute="true"
             app:isShowSecond="true"
             app:isTimeTextBold="true"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintBottom_toBottomOf="@+id/background_image"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:suffixDay="d"
