@@ -7,9 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.pensource.spacexcountdown.data.Result
 import com.pensource.spacexcountdown.data.model.NextLaunch
 import com.pensource.spacexcountdown.data.source.AppRepository
-import com.pensource.spacexcountdown.util.API_DATE_FORMAT
 import kotlinx.coroutines.launch
-import java.text.SimpleDateFormat
 import java.util.*
 import javax.inject.Inject
 
@@ -28,7 +26,7 @@ class HomeViewModel @Inject constructor(
 
                     // Remaining time for launch
                     _nextLaunchCountdown.value = getRemainingTimeForLaunch(
-                        result.data.lastDateUpdate,
+                        result.data.launchDateUnix * 1000,
                         Date().time
                     )
                 }
@@ -43,13 +41,7 @@ class HomeViewModel @Inject constructor(
     private val _nextLaunchCountdown = MutableLiveData<Long>()
     val nextLaunchCountdown: LiveData<Long> = _nextLaunchCountdown
 
-    private fun getRemainingTimeForLaunch(launchDate: String, currentTime: Long): Long? {
-        val launchTimeInMills = parseDate(launchDate, API_DATE_FORMAT)?.time
-//        return launchTimeInMills?.minus(currentTime)
-        return currentTime.minus(launchTimeInMills!!)
-    }
-
-    private fun parseDate(date: String, format: String): Date? {
-        return SimpleDateFormat(format, Locale.getDefault()).parse(date)
+    private fun getRemainingTimeForLaunch(launchTime: Long, currentTime: Long): Long {
+        return launchTime - currentTime
     }
 }
