@@ -8,4 +8,7 @@
         <item name="android:windowTranslucentStatus">true</item>
     </style>
 
+    <style name="SplashScreenTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_screen_background</item>
+    </style>
 </resources>
