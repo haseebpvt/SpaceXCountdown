@@ -77,4 +77,8 @@ dependencies {
     // Glide
     implementation 'com.github.bumptech.glide:glide:4.11.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
+    // AnyChart-Android
+    // https://github.com/AnyChart/AnyChart-Android
+    implementation 'com.github.AnyChart:AnyChart-Android:1.1.2'
 }
