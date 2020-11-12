@@ -1,11 +1,14 @@
 package com.pensource.spacexcountdown.di
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.util.Log
 import com.pensource.spacexcountdown.data.source.remote.Service
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ApplicationComponent
+import dagger.hilt.android.qualifiers.ApplicationContext
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -40,5 +43,10 @@ object DataModule {
     @Provides
     fun provideService(retrofit: Retrofit): Service {
         return retrofit.create(Service::class.java)
+    }
+
+    @Provides
+    fun provideSharedPreferences(@ApplicationContext context: Context): SharedPreferences {
+        return context.getSharedPreferences("app_preference", Context.MODE_PRIVATE)
     }
 }
