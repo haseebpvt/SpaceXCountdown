@@ -28,7 +28,7 @@ data class NextLaunch(
     @SerializedName("launch_date_source")
     val launchDateSource: String,
     @SerializedName("launch_date_unix")
-    val launchDateUnix: Int,
+    val launchDateUnix: Long,
     @SerializedName("launch_date_utc")
     val launchDateUtc: String,
     @SerializedName("launch_site")

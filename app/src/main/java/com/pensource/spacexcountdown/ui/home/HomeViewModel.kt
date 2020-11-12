@@ -16,22 +16,22 @@ class HomeViewModel @Inject constructor(
 ) : ViewModel() {
 
     private val _nextLaunch = MutableLiveData<NextLaunch>().apply {
-//        viewModelScope.launch {
-//            when(val result =  repository.getNextLaunch()) {
-//                is Result.Success -> {
-//                    value = result.data
-//
-//                    // Mission name
-//                    _nextLaunchTitle.value = result.data.missionName
-//
-//                    // Remaining time for launch
-//                    _nextLaunchCountdown.value = getRemainingTimeForLaunch(
-//                        result.data.launchDateUnix * 1000,
-//                        Date().time
-//                    )
-//                }
-//            }
-//        }
+        viewModelScope.launch {
+            when (val result = repository.getNextLaunch()) {
+                is Result.Success -> {
+                    value = result.data
+
+                    // Mission name
+                    _nextLaunchTitle.value = result.data.missionName
+
+                    // Remaining time for launch
+                    _nextLaunchCountdown.value = getRemainingTimeForLaunch(
+                        result.data.launchDateUnix * 1000,
+                        Date().time
+                    )
+                }
+            }
+        }
     }
     val nextLaunch: LiveData<NextLaunch> = _nextLaunch
 
