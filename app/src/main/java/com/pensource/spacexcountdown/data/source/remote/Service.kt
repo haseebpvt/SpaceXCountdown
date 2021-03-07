@@ -6,5 +6,5 @@ import retrofit2.http.GET
 interface Service {
 
     @GET("launches/next")
-    suspend fun getNextLaunch(): NextLaunch
+    fun getNextLaunch(): NextLaunch
 }
