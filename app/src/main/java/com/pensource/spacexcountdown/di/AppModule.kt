@@ -9,7 +9,7 @@ import com.pensource.spacexcountdown.data.source.remote.Service
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ApplicationComponent
+import dagger.hilt.components.SingletonComponent
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import javax.inject.Qualifier
@@ -21,7 +21,7 @@ annotation class LocalAppDataSourceAnnotation
 @Qualifier
 annotation class RemoteAppDataSourceAnnotation
 
-@InstallIn(ApplicationComponent::class)
+@InstallIn(SingletonComponent::class)
 @Module
 object AppModule {
 

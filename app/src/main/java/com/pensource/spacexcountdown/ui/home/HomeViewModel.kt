@@ -7,10 +7,12 @@ import androidx.lifecycle.viewModelScope
 import com.pensource.spacexcountdown.data.Result
 import com.pensource.spacexcountdown.data.model.NextLaunch
 import com.pensource.spacexcountdown.data.source.AppRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import java.util.*
 import javax.inject.Inject
 
+@HiltViewModel
 class HomeViewModel @Inject constructor(
     private val repository: AppRepository
 ) : ViewModel() {
