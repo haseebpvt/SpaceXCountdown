@@ -50,7 +50,7 @@ fun TimeCard(time: String) {
     }
 }
 
-@Preview
+@Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
     MaterialTheme {
