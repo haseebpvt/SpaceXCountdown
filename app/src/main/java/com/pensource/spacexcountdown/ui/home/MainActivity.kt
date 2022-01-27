@@ -42,7 +42,7 @@ fun TimeCard(time: String) {
                 time,
                 modifier = Modifier.padding(16.dp),
                 textAlign = TextAlign.Center,
-                color = Color.Red
+                color = Color.Blue
             )
         }
     }
